@@ -1,12 +1,13 @@
-@function spacing($size) {
-  @if contains($spacing, $size) {
-    @return map-get($spacing, $size);
+// DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
+// Inspired by Tailwind CSS: https://tailwindcss.com/
+@function spacing($value) {
+  @if index($spacing, $value) != null {
+    @error "#{value} does not exist in $spacing.";
   }
-
-  @error "#{size} doesn't exist in";
+  @return map-get($spacing, $value);
 }
 
-$spacing: (px: 1px,
+$spacing: (
   0: 0,
   1: 0.25rem,
   2: 0.5rem,
@@ -25,4 +26,6 @@ $spacing: (px: 1px,
   48: 12rem,
   56: 14rem,
   64: 16rem,
+  px: 1px,
 );
+

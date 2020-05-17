@@ -1,9 +1,0 @@
-@function contains($list, $var) {
-  @return (null==index($list, $var));
-}
-
-@function check-contains($map, $key) {
-  @if not contains($map, $key) {
-    @error "#{key} does not exist in mapping";
-  }
-}

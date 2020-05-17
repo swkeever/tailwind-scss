@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server --open=docs",
+    "dev": "live-server",
+    "parse": "node parse.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }

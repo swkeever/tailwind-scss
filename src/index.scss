@@ -1,24 +1,32 @@
 @import 'config';
 
 body {
-  background-color: color($bg);
-  font-family: $sans;
+  background-color: color($bg, 100);
+  font-family: font-family(sans);
   color: color($text, 900);
   margin: spacing(5);
   line-height: line-height();
-  // background-color: color($red, 100);
-  @include scrollbars();
+
+  @if $show-media {
+    background-color: color($red, 100);
+  }
 
   @include media($tablet...) {
-    // background-color: color($blue, 100);
+    @if $show-media {
+      background-color: color($blue, 100);
+    }
   }
 
   @include media($laptop...) {
-    // background-color: color($green, 100);
+    @if $show-media {
+      background-color: color($green, 100);
+    }
   }
 
   @include media($desktop...) {
-    // background-color: color($orange, 100);
+    @if $show-media {
+      background-color: color($orange, 100);
+    }
     line-height: line-height(loose);
   }
 }

@@ -1,0 +1,55 @@
+// DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
+// Inspired by Tailwind CSS: https://tailwindcss.com/
+@function transition-property($value: default) {
+  @if index($transition-property, $value) != null {
+    @error "#{value} does not exist in $transition-property.";
+  }
+  @return map-get($transition-property, $value);
+}
+
+$transition-property: (
+  none: none,
+  all: all,
+  default: (background-color, border-color, color, fill, stroke, opacity, box-shadow, transform),
+  colors: (background-color, border-color, color, fill, stroke),
+  opacity: opacity,
+  shadow: box-shadow,
+  transform: transform,
+);
+
+@function transition-duration($value) {
+  @if index($transition-duration, $value) != null {
+    @error "#{value} does not exist in $transition-duration.";
+  }
+  @return map-get($transition-duration, $value);
+}
+
+$transition-duration: (
+  75: 75ms,
+  100: 100ms,
+  150: 150ms,
+  200: 200ms,
+  300: 300ms,
+  500: 500ms,
+  700: 700ms,
+  1000: 1000ms,
+);
+
+@function transition-delay($value) {
+  @if index($transition-delay, $value) != null {
+    @error "#{value} does not exist in $transition-delay.";
+  }
+  @return map-get($transition-delay, $value);
+}
+
+$transition-delay: (
+  75: 75ms,
+  100: 100ms,
+  150: 150ms,
+  200: 200ms,
+  300: 300ms,
+  500: 500ms,
+  700: 700ms,
+  1000: 1000ms,
+);
+
