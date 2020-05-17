@@ -1,5 +1,5 @@
 # Source
 
-Default Tailwind CSS configuration taken from https://github.com/tailwindcss/tailwindcss/tree/master/stubs
+This stub is the [default configuration](https://github.com/tailwindcss/tailwindcss/tree/master/stubs) used by Tailwind CSS.
 
-This stub is used by `parse.js` to generate Sass files based on the configurations found in this file.
+Our [parser](../scripts) uses this stub to generate Sass files based off of this configuration.
