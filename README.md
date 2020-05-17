@@ -1,5 +1,9 @@
 # Passport Design
 
+This is a design system that utilizes my favorite CSS libraries.
+
+See `src/lib` for more details.
+
 ## Usage
 
 The repo already contains the files you need to get started using Sass. But if you want to generate new Tailwind configuration files, you can run
