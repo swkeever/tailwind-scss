@@ -1,4 +1,4 @@
-# Contributors
+# Libraries
 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Normalize.css](https://necolas.github.io/normalize.css/)
