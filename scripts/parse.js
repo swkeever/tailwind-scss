@@ -1,5 +1,5 @@
 const fs = require('fs');
-let { theme } = require('./stubs/defaultConfig.stub');
+let { theme } = require('../stubs/defaultConfig.stub');
 const _ = require('lodash');
 const srcDir = 'src/lib/tailwind';
 const keysToOmit = [
