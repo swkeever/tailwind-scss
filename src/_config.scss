@@ -18,9 +18,9 @@ $desktop: ">lg";
 // application colors
 $primary: $blue;
 $bg: $white;
-$text: $gray;
+$color-text: color($gray, 900);
 
 // for debugging purposes
-$show-media: false;
+$show-media: true;
 
 

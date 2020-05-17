@@ -1,12 +1,12 @@
 @import 'config';
 
+// Add custom CSS here
 body {
-  background-color: color($bg, 100);
+  background-color: color($bg);
   font-family: font-family(sans);
-  color: color($text, 900);
-  margin: spacing(5);
+  color: color($color-text);
+  margin: spacing(4);
   line-height: line-height();
-
   @if $show-media {
     background-color: color($red, 100);
   }
@@ -32,10 +32,15 @@ body {
 }
 
 a {
-  color: color($primary, 700);
+  color: color($primary, 600);
   text-decoration: none;
 
   &:hover {
+    color: color($primary, 700);
     text-decoration: underline;
+  }
+
+  &:visited {
+    color: color($primary, 900);
   }
 }
