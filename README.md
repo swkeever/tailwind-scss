@@ -2,6 +2,8 @@
 
 This is a design system that utilizes Sass and configurations from some of my favorite [CSS libraries](src/lib).
 
+**This software is distributed "as is" and can change without warning.**
+
 ## Usage
 
 The repo already contains the files you need to get started using Sass. But if you want to generate new Tailwind configuration files, you can run
