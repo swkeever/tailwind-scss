@@ -3,22 +3,20 @@ let { theme } = require('../stubs/defaultConfig.stub');
 const _ = require('lodash');
 const srcDir = 'src/lib/tailwind';
 const keysToOmit = [
-  'flex',
-  'grid',
   'background',
+  'fill',
   'container',
   'cursor',
-  'fill',
   'inset',
   'listStyle',
   'objectPosition',
   'min',
   'max',
-  'zIndex',
-  'stroke',
   'transform',
 ];
-const subKeysToOmit = ['colors.current', 'colors.transparent'];
+const subKeysToOmit = [
+  'stroke',
+  'colors.current', 'colors.transparent'];
 const categories = {
   breakpoints: ['screens'],
   colors: [
@@ -38,6 +36,20 @@ const categories = {
   spacing: ['spacing'],
   borders: ['borderRadius', 'borderWidth'],
   effects: ['boxShadow', 'opacity'],
+  layout: [
+    'zIndex',
+  ],
+  flexbox: ['flex', 'flexGrow', 'flexShrink', 'order'],
+  grid: [
+    'gridTemplateColumns',
+    'gridColumn',
+    'gridColumnStart',
+    'gridColumnEnd',
+    'gridTemplateRows',
+    'gridRow',
+    'gridRowStart',
+    'gridRowEnd',
+  ],
   typography: [
     'fontFamily',
     'fontSize',
@@ -52,6 +64,9 @@ const categories = {
     'transitionDelay',
   ],
   transforms: ['scale', 'rotate', 'skew'],
+  svg: [
+    'strokeWidth',
+  ]
 };
 
 function toKebabCase(string) {
@@ -181,7 +196,7 @@ Object.entries(categories).forEach(([category, properties]) => {
 
 // write index file
 let indexFileData = '';
-Object.keys(categories).forEach(category => {
+Object.keys(categories).forEach((category) => {
   indexFileData += `@import '${category}';\n`;
-})
+});
 makeFile('index', indexFileData);
