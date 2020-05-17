@@ -1,7 +1,7 @@
 const fs = require('fs');
 let { theme } = require('./stubs/defaultConfig.stub');
 const _ = require('lodash');
-const srcDir = 'src';
+const srcDir = 'src/lib/tailwind';
 const keysToOmit = [
   'flex',
   'grid',
@@ -155,7 +155,7 @@ function filePreamble() {
 function makeFile(category, data) {
   const fileName = `${srcDir}/_${category}.scss`;
   let writeData = filePreamble();
-  writeData += processCategory(category, data);
+  writeData += _.isObject(data) ? processCategory(category, data) : data;
   fs.writeFile(fileName, writeData, (err) => {
     if (err) throw err;
     console.log(`- ${fileName}`);
@@ -178,3 +178,10 @@ Object.entries(categories).forEach(([category, properties]) => {
   const data = _.pick(theme, properties);
   makeFile(category, data);
 });
+
+// write index file
+let indexFileData = '';
+Object.keys(categories).forEach(category => {
+  indexFileData += `@import '${category}';\n`;
+})
+makeFile('index', indexFileData);

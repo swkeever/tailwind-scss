@@ -1,13 +1,6 @@
-@import 'normalize';
-@import 'colors';
-@import 'borders';
-@import 'breakpoints';
-@import 'effects';
-@import 'spacing';
-@import 'transforms';
-@import 'transitions';
-@import 'typography';
-@import 'media';
+@import './lib/normalize/index';
+@import './lib/tailwind/index';
+@import './lib/include-media/index';
 
 // viewport types
 $phone: "<=sm";
