@@ -1,0 +1,16 @@
+@function border-radius($value: default) {
+    @if contains($border-radius, $value) {
+      @return map-get($border-radius, $value);
+    }
+
+    @error "#{value} doesn't exist in $border-radius";
+}
+
+$border-radius: (
+  none: 0,
+    sm: 0.125rem,
+    default: 0.25rem,
+    md: 0.375rem,
+    lg: 0.5rem,
+    full: 9999px
+);
