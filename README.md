@@ -1,8 +1,6 @@
 # Passport Design
 
-This is a design system that utilizes my favorite CSS libraries.
-
-See `src/lib` for more details.
+This is a design system that utilizes Sass and configurations from some of my favorite [CSS libraries](src/lib).
 
 ## Usage
 
