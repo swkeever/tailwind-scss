@@ -12,9 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1"
-  },
-  "dependencies": {
+    "live-server": "^1.2.1",
     "lodash": "^4.17.15"
-  }
+  },
+  "dependencies": {}
 }

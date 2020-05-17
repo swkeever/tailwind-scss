@@ -158,7 +158,7 @@ function makeFile(category, data) {
   writeData += processCategory(category, data);
   fs.writeFile(fileName, writeData, (err) => {
     if (err) throw err;
-    console.log(`successfully wrote: ${fileName}`);
+    console.log(`- ${fileName}`);
   });
 }
 
@@ -173,6 +173,7 @@ theme = _.merge(theme, theme.colors);
 delete theme.colors;
 
 // write to files
+console.log('successfully wrote:');
 Object.entries(categories).forEach(([category, properties]) => {
   const data = _.pick(theme, properties);
   makeFile(category, data);
