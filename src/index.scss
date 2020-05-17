@@ -1,0 +1,38 @@
+@import 'config';
+
+body {
+  background-color: color($background, 50);
+  font-family: $font-stack;
+  color: color($background, 900);
+  margin: $spacing-md-1;
+  line-height: $line-height-md;
+  background-color: color($red, 50);
+
+
+  @include media($tablet...) {
+    background-color: color($blue, 50);
+    width: $line-width-md;
+  }
+
+  @include media($desktop...) {
+    background-color: color($green, 50);
+    width: $line-width-lg;
+  }
+
+  @include media($widescreen...) {
+    background-color: color($orange, 50);
+    line-height: $line-height-lg;
+    width: $line-width-xl;
+  }
+
+  margin: auto;
+
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
