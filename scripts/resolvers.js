@@ -66,7 +66,6 @@ function resolveFunction(name, value) {
   if (objToProcess) {
     return resolveObject(name, objToProcess);
   } else {
-    // we didn't gather anything useful from this
     throw Error(`function ${value} resolved to undefined`);
   }
 }
