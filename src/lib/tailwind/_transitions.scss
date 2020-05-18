@@ -17,6 +17,20 @@ $transition-property: (
   transform: transform,
 );
 
+@function transition-timing-function($value) {
+  @if index($transition-timing-function, $value) != null {
+    @error "#{value} does not exist in $transition-timing-function.";
+  }
+  @return map-get($transition-timing-function, $value);
+}
+
+$transition-timing-function: (
+  linear: linear,
+  in: (cubic-bezier(0.4, 0, 1, 1)),
+  out: (cubic-bezier(0, 0, 0.2, 1)),
+  in-out: (cubic-bezier(0.4, 0, 0.2, 1)),
+);
+
 @function transition-duration($value) {
   @if index($transition-duration, $value) != null {
     @error "#{value} does not exist in $transition-duration.";
