@@ -1,7 +1,7 @@
+const { pick } = require("lodash");
 let { theme } = require("../stubs/defaultConfig.stub");
 const categories = require("./tailwind.config");
 const preprocess = require("./preprocessor");
-const { pick } = require("lodash");
 const { generateFile, generateIndexFile } = require("./generator");
 
 theme = preprocess(theme);

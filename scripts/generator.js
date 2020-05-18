@@ -1,7 +1,8 @@
 const fs = require("fs");
+const _ = require("lodash");
 const toSassVariable = require("./resolvers");
 const { toKebabCase } = require("./utils");
-const _ = require("lodash");
+
 const srcDir = "src/lib/tailwind";
 
 const colorFunction = `@function color($color, $weight: 500) {

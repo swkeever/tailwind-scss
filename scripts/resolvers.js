@@ -1,5 +1,4 @@
 const _ = require("lodash");
-const { theme } = require("../stubs/defaultConfig.stub");
 
 function resolveObject(name, obj) {
   res = `$${name}: (\n`;
