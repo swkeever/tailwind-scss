@@ -7,28 +7,36 @@ body {
   color: color($color-text);
   margin: spacing(4);
   line-height: line-height();
-  width: width("1/2");
+
+  margin: auto;
+
   @if $show-media {
-    background-color: color($red, 100);
+    background-color: color($red, 200);
   }
 
   @include media($tablet...) {
     @if $show-media {
-      background-color: color($blue, 100);
+      background-color: color($blue, 200);
     }
+
+    width: width("10/12");
   }
 
   @include media($laptop...) {
     @if $show-media {
-      background-color: color($green, 100);
+      background-color: color($green, 200);
     }
+
+    width: width("3/5");
   }
 
   @include media($desktop...) {
     @if $show-media {
-      background-color: color($orange, 100);
+      background-color: color($orange, 200);
     }
+
     line-height: line-height(loose);
+    width: width("6/12");
   }
 }
 

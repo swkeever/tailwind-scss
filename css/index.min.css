@@ -153,23 +153,26 @@ body {
   color: #1a202c;
   margin: 1rem;
   line-height: 1.5;
-  width: 50%;
-  background-color: #fff5f5;
+  margin: auto;
+  background-color: #fed7d7;
 }
 @media (min-width: 641px) and (max-width: 768px) {
   body {
-    background-color: #ebf8ff;
+    background-color: #bee3f8;
+    width: 83.33333%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    background-color: #f0fff4;
+    background-color: #c6f6d5;
+    width: 60%;
   }
 }
 @media (min-width: 1025px) {
   body {
-    background-color: #fffaf0;
+    background-color: #feebc8;
     line-height: 2;
+    width: 50%;
   }
 }
 a {
