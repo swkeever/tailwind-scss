@@ -17,20 +17,10 @@ function resolveArray(name, lst) {
   return `$${name}: (${lst.join(", ")});`;
 }
 
-function resolveTheme(str) {
-  const searchFor = "theme(";
-  str = str.substring(str.indexOf(searchFor) + searchFor.length + 1);
-  str = str.substring(0, str.indexOf("'"));
-  return theme[str];
-}
-
 function resolveFunction(name, value) {
   // first convert the function to a string and get everything after the =>
   const fnString = value.toString();
   let objString = fnString.substring(fnString.indexOf("=>") + 3).trim();
-
-  // lets see if we can resolve the theme
-  const themeObj = resolveTheme(objString);
 
   // filter out the trailing parens/curly braces
   if (objString[0] === "(" && objString[objString.length - 1] === ")") {
@@ -72,14 +62,6 @@ function resolveFunction(name, value) {
       };
     }
   });
-
-  // append the theme object if available
-  if (themeObj) {
-    objToProcess = {
-      ...objToProcess,
-      ...themeObj,
-    };
-  }
 
   if (objToProcess) {
     return resolveObject(name, objToProcess);
