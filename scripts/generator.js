@@ -21,6 +21,13 @@ const colorFunction = `@function color($color, $weight: 500) {
 
 `;
 
+const preamble = `// ***************************************************
+// DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
+// Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
+`;
+
 function generateFunction(name, data) {
   const defaultVal = () => {
     if (Object.keys(data).includes("default")) {
@@ -70,15 +77,6 @@ function generateCategory(category, data) {
   return result;
 }
 
-function generatePreamble() {
-  return `// ***************************************************
-// DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
-// Inspired by Tailwind CSS: https://tailwindcss.com/
-// ***************************************************
-
-`;
-}
-
 function generateIndexFile(categories) {
   let indexFileData = "";
   Object.keys(categories).forEach((category) => {
@@ -89,7 +87,7 @@ function generateIndexFile(categories) {
 
 function generateFile(category, data) {
   const fileName = `${srcDir}/_${category}.scss`;
-  let writeData = generatePreamble();
+  let writeData = preamble;
   writeData += _.isObject(data) ? generateCategory(category, data) : data;
   fs.writeFile(fileName, writeData, (err) => {
     if (err) throw err;
