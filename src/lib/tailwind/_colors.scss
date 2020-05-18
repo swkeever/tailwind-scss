@@ -1,16 +1,16 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function color($color, $weight: 500) {
   @if not variable-exists(#{color}) {
     @error "#{color} does not exist";
-  }
-  @else if type-of($color) != 'map' {
+  } @else if type-of($color) != "map" {
     @return $color;
-  }
-  @else if index($color, $weight) != null {
+  } @else if index($color, $weight) != null {
     @error "#{weight} does not exist in #{color}";
-  }
-  @else {
+  } @else {
     @return map-get($color, $weight);
   }
 }
@@ -138,4 +138,3 @@ $pink: (
   800: #97266d,
   900: #702459,
 );
-

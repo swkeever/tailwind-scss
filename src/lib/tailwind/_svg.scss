@@ -1,5 +1,8 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function stroke-width($value) {
   @if index($stroke-width, $value) != null {
     @error "#{value} does not exist in $stroke-width.";
@@ -12,4 +15,3 @@ $stroke-width: (
   1: 1,
   2: 2,
 );
-

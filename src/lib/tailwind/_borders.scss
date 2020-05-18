@@ -1,5 +1,8 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function border-radius($value: default) {
   @if index($border-radius, $value) != null {
     @error "#{value} does not exist in $border-radius.";
@@ -30,4 +33,3 @@ $border-width: (
   8: 8px,
   default: 1px,
 );
-

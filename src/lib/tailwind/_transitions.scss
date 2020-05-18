@@ -1,5 +1,8 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function transition-property($value: default) {
   @if index($transition-property, $value) != null {
     @error "#{value} does not exist in $transition-property.";
@@ -10,8 +13,23 @@
 $transition-property: (
   none: none,
   all: all,
-  default: (background-color, border-color, color, fill, stroke, opacity, box-shadow, transform),
-  colors: (background-color, border-color, color, fill, stroke),
+  default: (
+    background-color,
+    border-color,
+    color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+  ),
+  colors: (
+    background-color,
+    border-color,
+    color,
+    fill,
+    stroke,
+  ),
   opacity: opacity,
   shadow: box-shadow,
   transform: transform,
@@ -26,9 +44,15 @@ $transition-property: (
 
 $transition-timing-function: (
   linear: linear,
-  in: (cubic-bezier(0.4, 0, 1, 1)),
-  out: (cubic-bezier(0, 0, 0.2, 1)),
-  in-out: (cubic-bezier(0.4, 0, 0.2, 1)),
+  in: (
+    cubic-bezier(0.4, 0, 1, 1),
+  ),
+  out: (
+    cubic-bezier(0, 0, 0.2, 1),
+  ),
+  in-out: (
+    cubic-bezier(0.4, 0, 0.2, 1),
+  ),
 );
 
 @function transition-duration($value) {
@@ -66,4 +90,3 @@ $transition-delay: (
   700: 700ms,
   1000: 1000ms,
 );
-

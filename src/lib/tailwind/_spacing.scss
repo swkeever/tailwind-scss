@@ -1,5 +1,8 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function spacing($value) {
   @if index($spacing, $value) != null {
     @error "#{value} does not exist in $spacing.";
@@ -28,4 +31,3 @@ $spacing: (
   64: 16rem,
   px: 1px,
 );
-

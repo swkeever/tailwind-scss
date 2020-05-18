@@ -5,15 +5,26 @@
   "main": "index.js",
   "scripts": {
     "dev": "live-server",
-    "parse": "node scripts/parse.js",
+    "parse": "node scripts/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4",
     "live-server": "^1.2.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "prettier": "2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,scss,html}": "prettier --write"
+  }
 }

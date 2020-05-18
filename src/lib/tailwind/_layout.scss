@@ -1,5 +1,8 @@
+// ***************************************************
 // DO NOT MODIFY THIS FILE. THIS FILE WAS GENERATED.
 // Inspired by Tailwind CSS: https://tailwindcss.com/
+// ***************************************************
+
 @function z-index($value) {
   @if index($z-index, $value) != null {
     @error "#{value} does not exist in $z-index.";
@@ -16,4 +19,3 @@ $z-index: (
   50: 50,
   auto: auto,
 );
-
