@@ -17,7 +17,7 @@ $flex: (
   none: none,
 );
 
-@function flex-grow($value: default) {
+@function flex-grow($value) {
   @if index($flex-grow, $value) != null {
     @error "#{value} does not exist in $flex-grow.";
   }
@@ -26,10 +26,10 @@ $flex: (
 
 $flex-grow: (
   0: 0,
-  default: 1,
+  DEFAULT: 1,
 );
 
-@function flex-shrink($value: default) {
+@function flex-shrink($value) {
   @if index($flex-shrink, $value) != null {
     @error "#{value} does not exist in $flex-shrink.";
   }
@@ -38,7 +38,7 @@ $flex-grow: (
 
 $flex-shrink: (
   0: 0,
-  default: 1,
+  DEFAULT: 1,
 );
 
 @function order($value) {

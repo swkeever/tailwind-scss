@@ -12,6 +12,7 @@
 
 $font-family: (
   sans: (
+    ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -27,6 +28,7 @@ $font-family: (
     "Noto Color Emoji",
   ),
   serif: (
+    ui-serif,
     Georgia,
     Cambria,
     "Times New Roman",
@@ -34,6 +36,8 @@ $font-family: (
     serif,
   ),
   mono: (
+    ui-monospace,
+    SFMono-Regular,
     Menlo,
     Monaco,
     Consolas,
@@ -51,16 +55,58 @@ $font-family: (
 }
 
 $font-size: (
-  xs: 0.75rem,
-  sm: 0.875rem,
-  base: 1rem,
-  lg: 1.125rem,
-  xl: 1.25rem,
-  2xl: 1.5rem,
-  3xl: 1.875rem,
-  4xl: 2.25rem,
-  5xl: 3rem,
-  6xl: 4rem,
+  xs: (
+    0.75rem,
+    [object Object],
+  ),
+  sm: (
+    0.875rem,
+    [object Object],
+  ),
+  base: (
+    1rem,
+    [object Object],
+  ),
+  lg: (
+    1.125rem,
+    [object Object],
+  ),
+  xl: (
+    1.25rem,
+    [object Object],
+  ),
+  2xl: (
+    1.5rem,
+    [object Object],
+  ),
+  3xl: (
+    1.875rem,
+    [object Object],
+  ),
+  4xl: (
+    2.25rem,
+    [object Object],
+  ),
+  5xl: (
+    3rem,
+    [object Object],
+  ),
+  6xl: (
+    3.75rem,
+    [object Object],
+  ),
+  7xl: (
+    4.5rem,
+    [object Object],
+  ),
+  8xl: (
+    6rem,
+    [object Object],
+  ),
+  9xl: (
+    8rem,
+    [object Object],
+  ),
 );
 
 @function font-weight($value: normal) {
@@ -71,8 +117,8 @@ $font-size: (
 }
 
 $font-weight: (
-  hairline: 100,
-  thin: 200,
+  thin: 100,
+  extralight: 200,
   light: 300,
   normal: 400,
   medium: 500,
@@ -92,7 +138,7 @@ $font-weight: (
 $letter-spacing: (
   tighter: -0.05em,
   tight: -0.025em,
-  normal: 0,
+  normal: 0em,
   wide: 0.025em,
   wider: 0.05em,
   widest: 0.1em,

@@ -46,7 +46,7 @@ function generateFunction(name, data) {
   }
   @return map-get($${name}, $value);
 }
-  
+
 `;
 }
 

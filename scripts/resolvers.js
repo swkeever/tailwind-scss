@@ -1,7 +1,7 @@
 const _ = require("lodash");
 
 function resolveObject(name, obj) {
-  res = `$${name}: (\n`;
+  let res = `$${name}: (\n`;
 
   Object.entries(obj).forEach(([k, v], idx) => {
     const val = v.includes(", ") || _.isArray(v) ? `(${v})` : v;

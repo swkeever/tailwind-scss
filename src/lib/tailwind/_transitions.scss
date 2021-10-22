@@ -3,7 +3,7 @@
 // Inspired by Tailwind CSS: https://tailwindcss.com/
 // ***************************************************
 
-@function transition-property($value: default) {
+@function transition-property($value) {
   @if index($transition-property, $value) != null {
     @error "#{value} does not exist in $transition-property.";
   }
@@ -13,7 +13,7 @@
 $transition-property: (
   none: none,
   all: all,
-  default: (
+  DEFAULT: (
     background-color,
     border-color,
     color,
@@ -22,6 +22,8 @@ $transition-property: (
     opacity,
     box-shadow,
     transform,
+    filter,
+    backdrop-filter,
   ),
   colors: (
     background-color,
@@ -43,6 +45,9 @@ $transition-property: (
 }
 
 $transition-timing-function: (
+  DEFAULT: (
+    cubic-bezier(0.4, 0, 0.2, 1),
+  ),
   linear: linear,
   in: (
     cubic-bezier(0.4, 0, 1, 1),
@@ -71,6 +76,7 @@ $transition-duration: (
   500: 500ms,
   700: 700ms,
   1000: 1000ms,
+  DEFAULT: 150ms,
 );
 
 @function transition-delay($value) {
